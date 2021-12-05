@@ -1,0 +1,133 @@
+.main-calendar-box {
+    table.fc-scrollgrid.fc-scrollgrid-liquid {
+        border-top: none;
+    }
+
+    .fc-header-toolbar.fc-toolbar {
+        padding: 2rem;
+        padding-bottom: 0;
+
+        .fc-toolbar-chunk:nth-child(2) {
+            flex: 1;
+        }
+
+
+    }
+
+    th.fc-col-header-cell.fc-day {
+        border-left: 0;
+        border-right: none;
+
+        a {
+            color: $color-gray;
+        }
+    }
+
+    button.fc-today-button.fc-button.fc-button-primary {
+        background: transparent;
+        color: $color-primary-dark;
+        border-color: $color-primary-dark;
+        padding: 0.75rem 2rem;
+    }
+
+    button.fc-next-button.fc-button.fc-button-primary {
+        background: transparent;
+        color: $color-primary-dark;
+        border: none;
+        transition: all .5s;
+
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            color: $color-primary-light;
+            transform: scale(1.1);
+
+        }
+    }
+
+    button.fc-prev-button.fc-button.fc-button-primary {
+        background: transparent;
+        color: $color-primary-dark;
+        border: none;
+        transition: all .5s;
+
+        &:focus {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            color: $color-primary-light;
+            transform: scale(1.1);
+
+        }
+    }
+
+    h2#fc-dom-2 {
+        color: $color-primary-dark;
+        font-weight: 700;
+        width: 100%;
+    }
+
+    button.fc-myCustomButton-button.fc-button.fc-button-primary {
+        background: $color-primary-light;
+        border: none;
+
+    }
+
+    .day-box-calendar {
+        .fc-daygrid-day-top {
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.5rem;
+
+            a {
+                text-align: center;
+                color: $color-gray;
+
+            }
+        }
+    }
+
+    .day-box-calendar.fc-day-today {
+        .fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+            background-color: $color-primary;
+
+        }
+
+        .fc-daygrid-day-top {
+            a {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                color: $color-white;
+                background-color: $color-primary-dark;
+
+            }
+        }
+    }
+
+    a.fc-daygrid-event.fc-daygrid-block-event.fc-h-event.fc-event.fc-event-start.fc-event-end.fc-event-future {
+        border: none;
+    }
+
+    a.fc-daygrid-event.fc-daygrid-block-event.fc-h-event.fc-event.fc-event-start.fc-event-end.fc-event-today {
+        border: none;
+
+    }
+
+    .event-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: none;
+
+        .event-title {
+            padding: 0.2rem 0.5rem;
+            flex: 1;
+        }
+    }
+
+
+
+}
