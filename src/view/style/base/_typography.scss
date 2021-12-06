@@ -1,15 +1,16 @@
 body {
     font-family: 'lato', sans-serif;
     font-weight: 400;
-    font-size: $default-font-size;
     line-height: 1.7;
-    color: $color-grey-dark;
+    font-size: $default-font-size;
+    color: $default-color;
+    background-color: $color-primary;
 }
 
-.header-primary {}
+// .header-primary {}
 
-.header-secondary {}
+// .header-secondary {}
 
-.header-tertiary {}
+// .header-tertiary {}
 
-.paragraph {}
+// .paragraph {}
