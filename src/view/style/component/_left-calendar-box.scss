@@ -1,0 +1,96 @@
+.ant-picker-dropdown.left-calendar-box_item.ant-picker-dropdown-placement-bottomLeft {
+    left: 0 !important;
+    top: 0 !important;
+    transform: translate(48%, 5%);
+
+    .ant-picker-panel-container {
+        box-shadow: none;
+        border-bottom: 1px solid $color-gray;
+    }
+
+    .ant-picker-footer {
+        display: none;
+    }
+
+    button.ant-picker-header-super-prev-btn {}
+
+    .ant-picker-header-view,
+    .ant-picker-header button {
+        color: $color-primary-dark;
+        font-weight: 700;
+    }
+
+    button.ant-picker-header-super-next-btn {
+        display: none;
+    }
+
+    span.ant-picker-super-prev-icon {
+        display: none;
+    }
+}
+
+.left-calendar-box {
+    .ant-picker {
+        border: none;
+
+        .ant-picker-input {
+            display: none;
+        }
+    }
+
+    .event-content-box {
+        margin-top: 26rem;
+        padding: 2rem;
+
+        .event-content-header {
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                color: $color-primary-dark;
+                font-weight: 700;
+                font-size: 2rem;
+
+            }
+
+            button {
+                border-radius: 1.5rem;
+                background-color: $color-primary-dark;
+            }
+        }
+
+        .event-today {
+            color: $color-gray;
+            font-weight: 700;
+        }
+
+        .event-item-box {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: $color-primary-light;
+            background-color: $color-secondary-light;
+            border-left: 4px solid $color-primary-dark;
+            border-radius: 10px;
+            padding: 1rem;
+
+            h4 {
+                color: $color-primary-dark;
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+
+            .client-profile {
+                align-items: center;
+
+                .client-img {
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
