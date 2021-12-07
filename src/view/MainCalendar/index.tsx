@@ -15,11 +15,11 @@ const MainCalendar: React.FC = () => {
     data: null,
   });
   const handleDateClick = (arg: any) => {
-    console.debug("arg", arg);
+    // console.debug("arg", arg);
   };
 
   const renderEventContent = (eventInfo: any) => {
-    console.debug("eventInfo", eventInfo);
+    // console.debug("eventInfo", eventInfo);
     return (
       <div
         className="event-box"
@@ -112,7 +112,7 @@ const MainCalendar: React.FC = () => {
     },
   ];
   const handleEvent = (info: EventClickArg) => {
-    console.debug("infor", info);
+    // console.debug("infor", info);
     if (!info.event.url) {
       setModalData({ isVisible: true, data: info });
     }
@@ -140,9 +140,6 @@ const MainCalendar: React.FC = () => {
           },
         }}
         eventClick={(info) => handleEvent(info)}
-        eventMouseEnter={(info: EventHoveringArg) =>
-          console.debug("hover", info)
-        }
         dayMaxEvents={true}
         contentHeight="800px"
         viewClassNames="view-box-calendar"

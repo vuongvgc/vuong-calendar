@@ -30,16 +30,38 @@
 }
 
 .left-calendar-box {
-    .ant-picker {
-        border: none;
+    .sdp.calender-item {
+        width: 100%;
 
-        .ant-picker-input {
-            display: none;
+        .sdp--month-picker {
+            justify-content: center;
+            color: $color-primary-dark;
+
+            .sdp--text {
+                font-weight: 700;
+
+            }
+
+            .sdp--square-btn__shadowed,
+            .sdp--square-btn__shadowed:focus:hover {
+                box-shadow: none;
+            }
+
         }
+
+        .sdp--dates-grid {
+            gap: 4px;
+
+            button.sdp--square-btn.sdp--date-btn {
+                padding: 1.6rem;
+                border-radius: 50%;
+            }
+        }
+
     }
 
+
     .event-content-box {
-        margin-top: 26rem;
         padding: 2rem;
 
         .event-content-header {
