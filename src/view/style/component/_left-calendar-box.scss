@@ -72,6 +72,7 @@
             border-left: 4px solid $color-primary-dark;
             border-radius: 10px;
             padding: 1rem;
+            margin: 1rem 0;
 
             h4 {
                 color: $color-primary-dark;
@@ -89,6 +90,21 @@
                         height: auto;
                         border-radius: 50%;
                     }
+                }
+            }
+
+            span.anticon.anticon-video-camera {
+                background: $color-primary-dark;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                height: 4rem;
+                width: 4rem;
+
+                svg {
+                    font-size: 2rem;
+                    color: $color-white;
                 }
             }
         }
