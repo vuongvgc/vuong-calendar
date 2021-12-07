@@ -4,7 +4,7 @@ class EventEntity {
   id: string | undefined;
   title: string | undefined;
   description?: string | undefined;
-  eventType: number | undefined;
+  eventType: string | undefined;
   url?: string;
   date?: string;
   start?: string;
@@ -34,14 +34,15 @@ class EventEntity {
   }
   static createListEventForCalendar(listEvent: Array<any>) {
     if (!Array.isArray(listEvent)) return [];
-
+    console.debug("list", listEvent);
     let eventNormal = listEvent.filter(
-      (item: EventEntity) => item.eventType === 0
+      (item: EventEntity) => item.eventType === "0"
     );
 
     let eventWebinar = listEvent.filter(
-      (item: EventEntity) => item.eventType === 1
+      (item: EventEntity) => item.eventType === "1"
     );
+    console.debug("eventNormal", eventNormal, eventWebinar);
     let newEventArray = [
       {
         events: EventEntity.createListEvent(eventNormal),

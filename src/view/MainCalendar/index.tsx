@@ -1,15 +1,19 @@
-import FullCalendar, {
-  EventClickArg,
-  EventHoveringArg,
-} from "@fullcalendar/react";
+import FullCalendar, { EventClickArg } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
-import React, { useState } from "react";
-import { Modal, Tooltip, Typography } from "antd";
+import React, { useEffect, useState } from "react";
+import { Typography } from "antd";
 import ModalInforEvent from "../ModalInforEvent";
 import { ModalData } from "../ModalInforEvent/interface";
-
+import data from "../../Model/FakeData/event.json";
+import EventEntity from "../../Model/Event/entity";
 const MainCalendar: React.FC = () => {
+  const [dataCalendar, setDataCalendar] = useState<any>();
+  useEffect(() => {
+    let newData = EventEntity.createListEventForCalendar(data);
+    console.debug("newData", newData);
+    setDataCalendar(newData);
+  }, []);
   const [modalData, setModalData] = useState<ModalData>({
     isVisible: false,
     data: null,
@@ -117,7 +121,6 @@ const MainCalendar: React.FC = () => {
       setModalData({ isVisible: true, data: info });
     }
   };
-
   return (
     <div className="main-calendar-box">
       <FullCalendar
