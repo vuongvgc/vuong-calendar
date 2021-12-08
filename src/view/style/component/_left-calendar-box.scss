@@ -86,49 +86,56 @@
             font-weight: 700;
         }
 
-        .event-item-box {
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: $color-primary-light;
-            background-color: $color-secondary-light;
-            border-left: 4px solid $color-primary-dark;
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 1rem 0;
+        .event-list-box {
+            max-height: 51rem;
+            overflow: auto;
 
-            h4 {
-                color: $color-primary-dark;
+            .event-item-box {
+                font-weight: 300;
                 font-size: 1.4rem;
-                font-weight: 700;
-            }
+                color: $color-primary-light;
+                background-color: $color-secondary-light;
+                border-left: 4px solid $color-primary-dark;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
 
-            .client-profile {
-                align-items: center;
+                h4 {
+                    color: $color-primary-dark;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
 
-                .client-img {
+                .client-profile {
+                    align-items: center;
 
-                    img {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 50%;
+                    .client-img {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                span.anticon.anticon-video-camera {
+                    background: $color-primary-dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    height: 4rem;
+                    width: 4rem;
+
+                    svg {
+                        font-size: 2rem;
+                        color: $color-white;
                     }
                 }
             }
-
-            span.anticon.anticon-video-camera {
-                background: $color-primary-dark;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                height: 4rem;
-                width: 4rem;
-
-                svg {
-                    font-size: 2rem;
-                    color: $color-white;
-                }
-            }
         }
+
+
     }
 }

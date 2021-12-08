@@ -12,7 +12,7 @@ class EventEntity {
   constructor(event: any) {
     if (!event) return;
     Object.assign(this, event);
-    this.start = event.createdAt
+    this.start = event.start
       ? moment(event.start).format("YYYY-MM-DD")
       : undefined;
     this.end = event.end ? moment(event.end).format("YYYY-MM-DD") : undefined;
