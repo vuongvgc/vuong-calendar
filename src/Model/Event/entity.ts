@@ -1,9 +1,11 @@
 import moment from "moment";
+import { FORMAT_DATE } from "./contants";
 
 class EventEntity {
   id: string | undefined;
   title: string | undefined;
   description?: string | undefined;
+  location?: string | undefined;
   eventType: number | undefined;
   url?: string;
   date?: string;
@@ -13,12 +15,10 @@ class EventEntity {
     if (!event) return;
     Object.assign(this, event);
     this.start = event.start
-      ? moment(event.start).format("YYYY-MM-DD")
+      ? moment(event.start).format(FORMAT_DATE)
       : undefined;
-    this.end = event.end ? moment(event.end).format("YYYY-MM-DD") : undefined;
-    this.date = event.date
-      ? moment(event.date).format("YYYY-MM-DD")
-      : undefined;
+    this.end = event.end ? moment(event.end).format(FORMAT_DATE) : undefined;
+    this.date = event.date ? moment(event.date).format(FORMAT_DATE) : undefined;
   }
   static createListEvent(listEvent: Array<any>) {
     if (!Array.isArray(listEvent)) return [];

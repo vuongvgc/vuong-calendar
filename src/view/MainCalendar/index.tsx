@@ -18,12 +18,8 @@ const MainCalendar: React.FC = () => {
     isVisible: false,
     data: null,
   });
-  const handleDateClick = (arg: any) => {
-    // console.debug("arg", arg);
-  };
 
   const renderEventContent = (eventInfo: any) => {
-    // console.debug("eventInfo", eventInfo);
     return (
       <div
         className="event-box"
@@ -40,9 +36,18 @@ const MainCalendar: React.FC = () => {
     );
   };
   const handleEvent = (info: EventClickArg) => {
-    // console.debug("infor", info);
+    console.debug("infor", info);
     if (!info.event.url) {
-      setModalData({ isVisible: true, data: info });
+      let dataEvent = {
+        id: info?.event.id,
+        title: info?.event.title,
+        start: info?.event.startStr,
+        end: info?.event.endStr,
+        location: info?.event.extendedProps?.location,
+        description: info?.event.extendedProps?.description,
+        eventType: info?.event.extendedProps?.eventType,
+      };
+      setModalData({ isVisible: true, data: dataEvent });
     }
   };
   return (
@@ -51,7 +56,6 @@ const MainCalendar: React.FC = () => {
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         eventSources={dataCalendar}
-        dateClick={(arg: any) => handleDateClick(arg)}
         eventContent={renderEventContent}
         headerToolbar={{
           start: "today prev,next",

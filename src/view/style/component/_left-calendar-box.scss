@@ -113,6 +113,10 @@
                 padding: 1rem;
                 margin: 1rem 0;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 h4 {
                     color: $color-primary-dark;
                     font-size: 1.4rem;

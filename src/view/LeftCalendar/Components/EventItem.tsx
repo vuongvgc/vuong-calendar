@@ -29,7 +29,15 @@ const EventItem: React.FC<IEventItem> = (props) => {
               />
             </Col>
             <Col span={20}>
-              <Button type="link">View client profile</Button>
+              <Button type="link" onClick={(e) => e.stopPropagation()}>
+                <a
+                  href="https://www.facebook.com/vuongvgc/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  View client profile
+                </a>
+              </Button>
             </Col>
           </Row>
         )}

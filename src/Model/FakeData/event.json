@@ -4,7 +4,8 @@
       "title": "First section with Alex Stone",
       "description": "Talk about next project",
       "eventType": 0,
-      "date": "2021-12-06T17:00:00Z"
+      "date": "2021-12-06T17:00:00Z",
+      "location": "New york"
     },
     {
         "id": "2",
@@ -18,7 +19,9 @@
         "title": "Watch Football Mu-Chelsea",
         "description": "Talk about next project",
         "eventType": 0,
-        "date": "2021-12-06T17:00:00Z"
+        "date": "2021-12-06T17:00:00Z",
+        "location": "TV K +"
+
     },
     {
         "id": "4",
@@ -50,7 +53,8 @@
         "title": "Visit webinar",
         "description": "FrontEnd for future",
         "eventType": 1,
-        "date": "2021-12-07T17:00:00Z"
+        "date": "2021-12-07T17:00:00Z",
+        "location": "Landmark 81"
     },
     {
         "id": "8",

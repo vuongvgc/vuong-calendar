@@ -23,7 +23,7 @@ const ModalInforEvent: React.FC<IModal> = (props) => {
       title={
         <p className="event-title-modal">
           Event Information:
-          <span> {data?.event.title}</span>
+          <span> {data?.title}</span>
         </p>
       }
       visible={isModalVisible}
@@ -32,18 +32,13 @@ const ModalInforEvent: React.FC<IModal> = (props) => {
     >
       <p className="event-content">
         Date:
-        <span>
-          {data?.event.endStr
-            ? `${data?.event.startStr} - ${data?.event.endStr}`
-            : "All day"}
-        </span>
+        <span>{data?.start ? `${data?.start} - ${data?.end}` : "All day"}</span>
       </p>
       <p className="event-content">
-        Location: <span>{data?.event.extendedProps?.dataEvent?.location}</span>
+        Location: <span>{data?.location}</span>
       </p>
       <p className="event-content">
-        Description:{" "}
-        <span>{data?.event.extendedProps?.dataEvent?.description}</span>
+        Description: <span>{data?.description}</span>
       </p>
     </Modal>
   );
