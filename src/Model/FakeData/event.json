@@ -1,0 +1,73 @@
+[
+    {
+      "id": "1",
+      "title": "First section with Alex Stone",
+      "description": "Talk about next project",
+      "eventType": 0,
+      "date": "2021-12-06T17:00:00Z",
+      "location": "New york"
+    },
+    {
+        "id": "2",
+        "title": "Go To market",
+        "description": "Talk about next project",
+        "eventType": 0,
+        "date": "2021-12-06T17:00:00Z"
+    },
+    {
+        "id": "3",
+        "title": "Watch Football Mu-Chelsea",
+        "description": "Talk about next project",
+        "eventType": 0,
+        "date": "2021-12-06T17:00:00Z",
+        "location": "TV K +"
+
+    },
+    {
+        "id": "4",
+        "title": "See Movie",
+        "description": "Movie Three idots ",
+        "eventType": 0,
+        "date": "2021-12-06T17:00:00Z",
+        "url": "https://www.google.com/"
+    },
+    {
+        "id": "5",
+        "title": "Party with friend",
+        "description": "Movie Three idots ",
+        "eventType": 0,
+        "date": "2021-12-09T17:00:00Z"
+      
+    },
+    {
+        "id": "6",
+        "title": "Go business trip",
+        "description": "Movie Three idots ",
+        "eventType": 0,
+        "start": "2021-12-07T17:00:00Z",
+        "end": "2021-12-14T16:59:59Z"
+
+    },
+    {
+        "id": "7",
+        "title": "Visit webinar",
+        "description": "FrontEnd for future",
+        "eventType": 1,
+        "date": "2021-12-07T17:00:00Z",
+        "location": "Landmark 81"
+    },
+    {
+        "id": "8",
+        "title": "Go to the restaurant",
+        "description": "Go with Girl friend",
+        "eventType": 0,
+        "date": "2022-01-07T17:00:00Z"
+    },
+    {
+        "id": "9",
+        "title": "Visit webinar AI",
+        "eventType": 1,
+        "date": "2022-01-07T17:00:00Z"
+    }
+  ]
+  

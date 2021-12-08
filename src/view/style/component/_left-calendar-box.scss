@@ -12,12 +12,11 @@
         display: none;
     }
 
-    button.ant-picker-header-super-prev-btn {}
-
     .ant-picker-header-view,
     .ant-picker-header button {
         color: $color-primary-dark;
         font-weight: 700;
+
     }
 
     button.ant-picker-header-super-next-btn {
@@ -30,26 +29,62 @@
 }
 
 .left-calendar-box {
-    .ant-picker {
-        border: none;
+    .sdp.calender-item {
+        width: 100%;
 
-        .ant-picker-input {
-            display: none;
+        .sdp--month-picker {
+            justify-content: center;
+            color: $color-primary-dark;
+
+            .sdp--text {
+                font-weight: 700;
+
+            }
+
+            .sdp--square-btn__shadowed,
+            .sdp--square-btn__shadowed:focus:hover {
+                box-shadow: none;
+            }
+
         }
+
+        .sdp--dates-grid {
+            gap: 2px;
+
+            @include respond(xl-screen) {
+                gap: 4px;
+            }
+
+            button.sdp--square-btn.sdp--date-btn {
+                border-radius: 50%;
+                padding: 1.2rem;
+
+                @include respond(xl-screen) {
+                    padding: 1.6rem;
+                }
+            }
+        }
+
     }
 
+
     .event-content-box {
-        margin-top: 26rem;
         padding: 2rem;
 
         .event-content-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             h3 {
                 color: $color-primary-dark;
                 font-weight: 700;
-                font-size: 2rem;
+                font-size: 1.5rem;
+
+                @include respond(xl-screen) {
+                    font-size: 2rem;
+
+                }
 
             }
 
@@ -64,49 +99,60 @@
             font-weight: 700;
         }
 
-        .event-item-box {
-            font-weight: 300;
-            font-size: 1.4rem;
-            color: $color-primary-light;
-            background-color: $color-secondary-light;
-            border-left: 4px solid $color-primary-dark;
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 1rem 0;
+        .event-list-box {
+            max-height: 51rem;
+            overflow: auto;
 
-            h4 {
-                color: $color-primary-dark;
+            .event-item-box {
+                font-weight: 300;
                 font-size: 1.4rem;
-                font-weight: 700;
-            }
+                color: $color-primary-light;
+                background-color: $color-secondary-light;
+                border-left: 4px solid $color-primary-dark;
+                border-radius: 10px;
+                padding: 1rem;
+                margin: 1rem 0;
 
-            .client-profile {
-                align-items: center;
+                &:hover {
+                    cursor: pointer;
+                }
 
-                .client-img {
+                h4 {
+                    color: $color-primary-dark;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                }
 
-                    img {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 50%;
+                .client-profile {
+                    align-items: center;
+
+                    .client-img {
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                span.anticon.anticon-video-camera {
+                    background: $color-primary-dark;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    height: 4rem;
+                    width: 4rem;
+
+                    svg {
+                        font-size: 2rem;
+                        color: $color-white;
                     }
                 }
             }
-
-            span.anticon.anticon-video-camera {
-                background: $color-primary-dark;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                height: 4rem;
-                width: 4rem;
-
-                svg {
-                    font-size: 2rem;
-                    color: $color-white;
-                }
-            }
         }
+
+
     }
 }
