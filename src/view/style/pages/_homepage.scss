@@ -5,7 +5,11 @@
 
     .left-calendar__box {
         background-color: $color-white;
-        margin-right: 2rem;
+
+        @include respond(md-screen) {
+            margin-right: 2rem;
+
+        }
     }
 
     .right-calendar__box {
