@@ -50,7 +50,7 @@
     },
     {
         "id": "7",
-        "title": "Visit webinar",
+        "title": "Begin your Tai Chi journey: An introduction to essential Tai Chi skills",
         "description": "FrontEnd for future",
         "eventType": 1,
         "date": "2021-12-07T17:00:00Z",
@@ -65,7 +65,9 @@
     },
     {
         "id": "9",
-        "title": "Visit webinar AI",
+        "title": "Vegan For Beginners",
+        "description": "Here's your window to peek inside of the Vegan/Plant-based world",
+        "location": "Online event",
         "eventType": 1,
         "date": "2022-01-07T17:00:00Z"
     }

@@ -32,7 +32,11 @@ const ModalInforEvent: React.FC<IModal> = (props) => {
     >
       <p className="event-content">
         Date:
-        <span>{data?.start ? `${data?.start} - ${data?.end}` : "All day"}</span>
+        <span>
+          {data?.start && data?.end
+            ? `${data?.start} - ${data?.end}`
+            : "All day"}
+        </span>
       </p>
       <p className="event-content">
         Location: <span>{data?.location}</span>

@@ -31,9 +31,6 @@ const LeftCalendar: React.FC = () => {
       setDataEvent(newData);
     }
   }, [dateChoose]);
-  useEffect(() => {
-    console.debug("dataEvent", dataEvent);
-  }, [dataEvent]);
 
   const onChange = (date: any) => {
     setDateChoose(moment(date).format(FORMAT_DATE));
@@ -53,20 +50,22 @@ const LeftCalendar: React.FC = () => {
           Today, <span>{moment().format("DD MMM")}</span>
         </p>
         <div className="event-list-box">
-          {dataEvent
-            ? dataEvent.map((item: EventEntity) => {
-                return (
-                  <div
-                    key={item.id}
-                    onClick={() => {
-                      setModalData({ isVisible: true, data: item });
-                    }}
-                  >
-                    <EventItem event={item} />
-                  </div>
-                );
-              })
-            : "No data"}
+          {dataEvent ? (
+            dataEvent.map((item: EventEntity) => {
+              return (
+                <div
+                  key={item.id}
+                  onClick={() => {
+                    setModalData({ isVisible: true, data: item });
+                  }}
+                >
+                  <EventItem event={item} />
+                </div>
+              );
+            })
+          ) : (
+            <p>No event</p>
+          )}
         </div>
       </div>
       <ModalInforEvent data={modalData} setModalData={setModalData} />

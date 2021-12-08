@@ -1,5 +1,5 @@
 import moment from "moment";
-import { FORMAT_DATE } from "./contants";
+import { EVENT_TYPE, FORMAT_DATE } from "./contants";
 
 class EventEntity {
   id: string | undefined;
@@ -28,7 +28,6 @@ class EventEntity {
   }
   static createListEventForCalendar(listEvent: Array<any>) {
     if (!Array.isArray(listEvent)) return [];
-    console.debug("list", listEvent);
     let createEventList = EventEntity.createListEvent(listEvent);
     createEventList.forEach((item: any) => {
       Object.keys(item).forEach(
@@ -36,26 +35,25 @@ class EventEntity {
       );
     });
     let eventNormal = createEventList.filter(
-      (item: EventEntity) => item.eventType === 0
+      (item: EventEntity) => item.eventType === EVENT_TYPE.APPOINTMENT
     );
     let eventWebinar = createEventList.filter(
-      (item: EventEntity) => item.eventType === 1
+      (item: EventEntity) => item.eventType === EVENT_TYPE.EVENT
     );
-    console.debug("eventNormal", eventNormal, eventWebinar);
     let newEventArray = [
       {
         events: eventNormal,
         textColor: "#5684AE",
         backgroundColor: "#f7d6b8",
         borderColor: "#0F4C81",
-        eventType: 0,
+        eventType: EVENT_TYPE.APPOINTMENT,
       },
       {
         events: eventWebinar,
         color: "#F9BE81",
         textColor: "#5684AE",
         borderColor: "#5684AE",
-        eventType: 1,
+        eventType: EVENT_TYPE.EVENT,
       },
     ];
     return newEventArray;

@@ -10,22 +10,22 @@ import data from "../../Model/FakeData/event.json";
 import EventEntity from "../../Model/Event/entity";
 const MainCalendar: React.FC = () => {
   const [dataCalendar, setDataCalendar] = useState<any>();
-  useEffect(() => {
-    let newData = EventEntity.createListEventForCalendar(data);
-    console.debug("newData", newData);
-    setDataCalendar(newData);
-  }, []);
   const [modalData, setModalData] = useState<ModalData>({
     isVisible: false,
     data: null,
   });
 
+  useEffect(() => {
+    let newData = EventEntity.createListEventForCalendar(data);
+    setDataCalendar(newData);
+  }, []);
+
   const renderEventContent = (eventInfo: any) => {
+    const style = eventInfo.borderColor && {
+      borderLeft: `3px solid ${eventInfo.borderColor}`,
+    };
     return (
-      <div
-        className="event-box"
-        style={{ borderLeft: `3px solid ${eventInfo.borderColor}` }}
-      >
+      <div className="event-box" style={style}>
         <Typography.Text
           className="event-title"
           ellipsis={true}
@@ -37,7 +37,6 @@ const MainCalendar: React.FC = () => {
     );
   };
   const handleEvent = (info: EventClickArg) => {
-    console.debug("infor", info);
     if (!info.event.url) {
       let dataEvent = {
         id: info?.event.id,
@@ -56,22 +55,12 @@ const MainCalendar: React.FC = () => {
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
-        // initialView="timeGridWeek"
         eventSources={dataCalendar}
         eventContent={renderEventContent}
         headerToolbar={{
           start: "today prev,next",
           center: "title",
           end: "dayGridMonth timeGridWeek",
-        }}
-        customButtons={{
-          myCustomButton: {
-            text: "Month",
-
-            click: function () {
-              alert("clicked the custom button!");
-            },
-          },
         }}
         eventClick={(info) => handleEvent(info)}
         dayMaxEvents={true}
