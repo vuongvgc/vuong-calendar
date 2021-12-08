@@ -1,5 +1,6 @@
 import FullCalendar, { EventClickArg } from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import React, { useEffect, useState } from "react";
 import { Typography } from "antd";
@@ -53,18 +54,20 @@ const MainCalendar: React.FC = () => {
   return (
     <div className="main-calendar-box">
       <FullCalendar
-        plugins={[dayGridPlugin, interactionPlugin]}
+        plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
         initialView="dayGridMonth"
+        // initialView="timeGridWeek"
         eventSources={dataCalendar}
         eventContent={renderEventContent}
         headerToolbar={{
           start: "today prev,next",
           center: "title",
-          end: "myCustomButton",
+          end: "dayGridMonth timeGridWeek",
         }}
         customButtons={{
           myCustomButton: {
             text: "Month",
+
             click: function () {
               alert("clicked the custom button!");
             },
