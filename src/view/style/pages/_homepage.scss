@@ -1,0 +1,20 @@
+.homepage {
+    padding: 1rem;
+    justify-content: center;
+    align-items: stretch;
+
+    .left-calendar__box {
+        background-color: $color-white;
+
+        @include respond(md-screen) {
+            margin-right: 2rem;
+
+        }
+    }
+
+    .right-calendar__box {
+        background-color: $color-white;
+
+
+    }
+}

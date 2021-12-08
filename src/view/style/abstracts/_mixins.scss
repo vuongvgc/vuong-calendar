@@ -6,65 +6,94 @@
 
 }
 
+// RESPONSIVE - MIN-WIDTH - ANTD- xs -sm -md - lg -xl - xxl
+// USE: @include respond(xs-screen) {}
+
 @mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) // 600px
+    // screen < 280px
 
-            {
+    @if $breakpoint==xxs-screen {
+        @media only screen and (max-width: 280px) {
             @content
         }
 
         ;
     }
 
-    @if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em) // 900px
-
-            {
+    // screen < 576px
+    @if $breakpoint==xs-screen {
+        @media only screen and (max-width: 576px) {
             @content
         }
 
         ;
     }
 
-    @if $breakpoint==tab-land {
-        @media only screen and (max-width: 75em) // 1200px 
-
-            {
+    // screen ≥ 576px
+    @if $breakpoint==sm-screen {
+        @media only screen and (min-width: 576px) {
             @content
         }
 
         ;
     }
 
-    @if $breakpoint==big-desktop {
-        @media only screen and (min-width: 112.5em) // 1800px 
-
-            {
+    // screen ≥ 768px
+    @if $breakpoint==md-screen {
+        @media only screen and (min-width: 768px) {
             @content
         }
 
         ;
     }
+
+    // screen ≥ 992px
+    @if $breakpoint==lg-screen {
+        @media only screen and (min-width: 992px) {
+            @content
+        }
+
+        ;
+    }
+
+    // screen ≥ 1200px
+    @if $breakpoint==xl-screen {
+        @media only screen and (min-width: 1024px) {
+            @content
+        }
+
+        ;
+    }
+
+    // screen ≥ 1600px
+    @if $breakpoint==xxl-screen {
+        @media only screen and (min-width: 1600px) {
+            @content
+        }
+
+        ;
+    }
+
 }
 
+@mixin respondRelatedHeight($breakpoint) {
 
+    // screen < 568px
+    @if $breakpoint==sm-screen {
+        @media only screen and (max-height: 568px) {
+            @content
+        }
 
-
-
-
-
-
-
-
-
-
-
-/*
-@mixin grip-gutter-horizontal {
-    &:not(:last-child) {
-        margin-right: $gutter-horizontal;
+        ;
     }
-    
+
+    // screen < 768px
+    @if $breakpoint==md-screen {
+        @media only screen and (max-height: 768px) {
+            @content
+        }
+
+        ;
+    }
+
 }
-*/
