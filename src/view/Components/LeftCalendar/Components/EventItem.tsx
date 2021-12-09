@@ -2,7 +2,7 @@ import { Button, Col, Row } from "antd";
 import { VideoCameraOutlined } from "@ant-design/icons";
 import React from "react";
 import { IEventItem } from "../interface";
-import { EVENT_TYPE } from "../../../Model/Event/contants";
+import { EVENT_TYPE } from "../../../../Model/Event/contants";
 const EventItem: React.FC<IEventItem> = (props) => {
   const { title, start, end, eventType } = props.event;
   const style =
