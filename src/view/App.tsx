@@ -7,12 +7,32 @@ import HomepageMobile from "./HomepageMobile";
 import CalendarMobile from "./CalendarMobile";
 
 const App: React.FC = () => {
+  const deviceType = (): "mobile" | "desktop" | "tablet" => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+      return "tablet";
+    } else if (
+      /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+        ua
+      )
+    ) {
+      return "mobile";
+    }
+    return "desktop";
+  };
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/mobile" element={<HomepageMobile />} />
-        <Route path="/calendar" element={<CalendarMobile />} />
+        {deviceType() === "mobile" && (
+          <>
+            <Route path="/" element={<HomepageMobile />} />
+            <Route path="/calendar" element={<CalendarMobile />} />
+          </>
+        )}
+        {deviceType() === "desktop" && (
+          <Route path="/" element={<Homepage />} />
+        )}
       </Routes>
     </BrowserRouter>
   );
