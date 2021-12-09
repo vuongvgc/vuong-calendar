@@ -1,6 +1,6 @@
 import React from "react";
-import { TitleMobile } from "../MobileTitle";
-import MainCalendar from "../MainCalendar";
+import MainCalendar from "../Components/MainCalendar";
+import { TitleMobile } from "../Components/MobileTitle";
 
 const CalendarMobile: React.FC = () => {
   return (

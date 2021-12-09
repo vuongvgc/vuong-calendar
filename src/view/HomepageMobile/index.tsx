@@ -1,8 +1,8 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
 import React from "react";
-import LeftCalendar from "../LeftCalendar";
-import { TitleMobile } from "../MobileTitle";
 import { useNavigate } from "react-router";
+import LeftCalendar from "../Components/LeftCalendar";
+import { TitleMobile } from "../Components/MobileTitle";
 
 const HomepageMobile: React.FC = () => {
   const navigate = useNavigate();
