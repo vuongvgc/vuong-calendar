@@ -1,7 +1,7 @@
 import { Row, Col } from "antd";
 import React from "react";
-import LeftCalendar from "../LeftCalendar";
-import MainCalendar from "../MainCalendar";
+import LeftCalendar from "../Components/LeftCalendar";
+import MainCalendar from "../Components/MainCalendar";
 
 const Homepage: React.FC = () => {
   return (

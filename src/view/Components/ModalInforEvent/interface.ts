@@ -1,5 +1,5 @@
 import { ModalProps } from "antd";
-import EventEntity from "../../Model/Event/entity";
+import EventEntity from "../../../Model/Event/entity";
 export interface ModalData {
   isVisible: boolean;
   data: EventEntity | null;

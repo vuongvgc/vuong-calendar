@@ -6,8 +6,8 @@ import React, { useEffect, useState } from "react";
 import { Typography } from "antd";
 import ModalInforEvent from "../ModalInforEvent";
 import { ModalData } from "../ModalInforEvent/interface";
-import data from "../../Model/FakeData/event.json";
-import EventEntity from "../../Model/Event/entity";
+import data from "../../../Model/FakeData/event.json";
+import EventEntity from "../../../Model/Event/entity";
 const MainCalendar: React.FC = () => {
   const [dataCalendar, setDataCalendar] = useState<any>();
   const [modalData, setModalData] = useState<ModalData>({

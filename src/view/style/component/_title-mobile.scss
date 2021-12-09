@@ -1,0 +1,41 @@
+.title-mobile {
+    background: $color-background;
+    opacity: 0.85;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid $color-secondary-dark;
+    border-bottom-left-radius: 2rem 2rem;
+    border-bottom-right-radius: 2rem 2rem;
+    z-index: 99;
+
+    svg {
+        color: $color-black;
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        text-align: center;
+        color: $color-black;
+        margin-bottom: 0;
+
+    }
+
+    .nav-left {
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .nav-right {
+        text-align: right;
+        padding: 0 1rem;
+    }
+}
